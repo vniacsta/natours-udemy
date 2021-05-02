@@ -89,7 +89,8 @@ body {
       @media (max-width: 37.5em) {
         .header-box h1 .main-heading {
           letter-spacing: 1rem;
-          font-family: 5rem; } }
+          font-size: 5rem;
+          padding: 0 1rem; } }
     .header-box h1 .sub-heading {
       display: block;
       font-size: 2rem;
@@ -148,6 +149,10 @@ p {
 
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
+
+.u-padding-sides-medium {
+  padding-right: 5rem !important;
+  padding-left: 5rem !important; }
 
 .bg-video {
   position: absolute;
@@ -689,10 +694,17 @@ footer {
     @media (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
+  @media (max-width: 75em) {
+    .row {
+      padding: 0 3rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem;
+      max-width: 80%;
       padding: 0 3rem; } }
+  @media (max-width: 37.5em) {
+    .row {
+      max-width: 85%;
+      padding: 0 1.5rem; } }
   .row::after {
     content: '';
     display: table;
