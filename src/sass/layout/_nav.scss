@@ -42,9 +42,19 @@ nav {
     &:hover .nav-icon::before {
       top: -1rem;
     }
-    
+
     &:hover .nav-icon::after {
       top: 1rem;
+    }
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
     }
   }
 
@@ -61,6 +71,16 @@ nav {
     );
     z-index: 1000;
     transition: transform 0.8s;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   .navigation {
@@ -122,7 +142,7 @@ nav {
   .nav-icon {
     position: relative;
     margin-top: 3.5rem;
-    
+
     &,
     &::before,
     &::after {
@@ -131,21 +151,21 @@ nav {
       background-color: $color-grey-dark-3;
       display: inline-block;
     }
-    
+
     &::before,
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       left: 0;
-      transition: all .1s;
+      transition: all 0.1s;
     }
 
     &::before {
-      top: -.8rem;
+      top: -0.8rem;
     }
 
     &::after {
-      top: .8rem;
+      top: 0.8rem;
     }
   }
 }

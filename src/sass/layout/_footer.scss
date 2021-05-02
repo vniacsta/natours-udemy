@@ -2,30 +2,43 @@ footer {
   background-color: $color-grey-dark-3;
   padding: 10rem 0;
   font-size: 1.4rem;
-  
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
   .footer-logo {
     width: 15rem;
     height: auto;
     display: block;
     margin: 0 auto;
     padding-bottom: 8rem;
+
+    @include respond(tab-port) {
+      padding-bottom: 6rem;
+    }
   }
-  
+
   .navigation {
     list-style: none;
     padding-top: 2rem;
     border-top: 1px solid $color-grey-dark;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
   }
-  
+
   .footer-item {
     display: inline-block;
-    
+
     &:not(:last-child) {
       margin-right: 1.5rem;
     }
   }
-  
+
   .footer-link {
     &:link,
     &:visited {
@@ -34,7 +47,7 @@ footer {
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
-      transition: all .2s;
+      transition: all 0.2s;
     }
 
     &:hover,
@@ -52,5 +65,10 @@ footer {
     border-top: 1px solid $color-grey-dark;
     width: 85%;
     float: right;
+
+    @include respond(tab-port) {
+      width: 100%;
+      float: none;
+    }
   }
 }
