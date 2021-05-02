@@ -23,6 +23,33 @@
   </head>
 
   <body>
+    <nav>
+      <input type="checkbox" class="nav-checkbox" id="nav-toggle" />
+      <label for="nav-toggle" class="nav-btn">
+        <span class="nav-icon"></span>
+      </label>
+      <div class="background"></div>
+      <div class="navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>01</span>About Natous</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>02</span>Your benefits</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>03</span>Popular tours</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>04</span>Stories</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"><span>05</span>Book now</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <header class="header">
       <img src="media/logo-white.png" alt="Logo" class="logo" />
       <div class="header-box">
@@ -30,7 +57,9 @@
           <span class="main-heading">Outdoors</span>
           <span class="sub-heading">is where life happens</span>
         </h1>
-        <a href="#" class="btn btn-white btn-animated">Discover our tours</a>
+        <a href="#tours" class="btn btn-white btn-animated"
+          >Discover our tours</a
+        >
       </div>
     </header>
 
@@ -111,7 +140,7 @@
         </div>
       </section>
 
-      <section class="tours">
+      <section class="tours" id="tours">
         <div class="u-center-txt u-margin-bottom-big">
           <h2>Most popular tours</h2>
         </div>
@@ -137,11 +166,11 @@
 
               <div class="side side-back side-back-1">
                 <div class="cta">
-                  <div class="price-box">
+                  <div class="price-box u-margin-bottom-big">
                     <p class="only">Only</p>
                     <p class="price">€297</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book now!</a>
+                  <a href="#popup" class="btn btn-white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -166,11 +195,11 @@
 
               <div class="side side-back side-back-2">
                 <div class="cta">
-                  <div class="price-box">
+                  <div class="price-box u-margin-bottom-big">
                     <p class="only">Only</p>
                     <p class="price">€497</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book now!</a>
+                  <a href="#popup" class="btn btn-white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -195,11 +224,11 @@
 
               <div class="side side-back side-back-3">
                 <div class="cta">
-                  <div class="price-box">
+                  <div class="price-box u-margin-bottom-big">
                     <p class="only">Only</p>
                     <p class="price">€897</p>
                   </div>
-                  <a href="#" class="btn btn-white">Book now!</a>
+                  <a href="#popup" class="btn btn-white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -276,6 +305,143 @@
           <a href="#" class="btn-txt">Read all stories &rarr;</a>
         </div>
       </section>
+
+      <section class="booking">
+        <div class="row">
+          <div class="book">
+            <form action="#">
+              <div class="u-margin-bottom-medium">
+                <h2>Start booking now</h2>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  class="input"
+                  placeholder="Full Name"
+                  required
+                />
+                <label for="name" class="input-label">Full Name</label>
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  class="input"
+                  placeholder="Email"
+                  required
+                />
+                <label for="email" class="input-label">Email</label>
+              </div>
+
+              <div class="form-group u-margin-bottom-medium">
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="small"
+                    name="size"
+                    class="radio-input"
+                  />
+                  <label for="small" class="radio-label">
+                    <span class="radio-btn"></span>
+                    Small tour group
+                  </label>
+                </div>
+
+                <div class="radio-group">
+                  <input
+                    type="radio"
+                    id="large"
+                    name="size"
+                    class="radio-input"
+                  />
+                  <label for="large" class="radio-label">
+                    <span class="radio-btn"></span>
+                    Large tour group
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <button class="btn btn-green">Next step &rarr;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <aside class="popup" id="popup">
+      <div class="popup-content">
+        <div class="popup-images">
+          <img src="./media/nat-8.jpg" alt="Tour photo" />
+          <img src="./media/nat-9.jpg" alt="Tour photo" />
+        </div>
+        <div class="popup-info">
+          <a href="#tours" class="close">&times;</a>
+          <div class="u-margin-bottom-small">
+            <h2>Start booking now</h2>
+          </div>
+          <h3 class="u-margin-bottom-small">
+            Important - please read the terms and conditions first
+          </h3>
+          <p class="popup-txt">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
+            blanditiis hic aliquid nam nobis, voluptas voluptatem dolores ex
+            numquam optio saepe enim quos unde aperiam velit at! Quia,
+            voluptatem reprehenderit? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Autem est voluptate eos maxime vitae minus
+            possimus similique? Veniam quasi veritatis dicta quam quos
+            consectetur ea, nobis deleniti. Praesentium, placeat sapiente. Quia,
+            voluptatem reprehenderit? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Autem est voluptate eos maxime vitae minus
+            possimus similique?
+          </p>
+          <a href="#" class="btn btn-green">Book now</a>
+        </div>
+      </div>
+    </aside>
+
+    <footer>
+      <img
+        src="../media/logo-green-2x.png"
+        alt="Full logo"
+        class="footer-logo"
+      />
+      <div class="row">
+        <div class="col-1-of-2">
+          <ul class="navigation">
+            <li class="footer-item">
+              <a href="#" class="footer-link">Company</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Contact us</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Careers</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Privacy policy</a>
+            </li>
+            <li class="footer-item">
+              <a href="#" class="footer-link">Terms</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-1-of-2">
+          <p class="copyright">
+            Built by <a href="#" class="footer-link">VniaCsta</a> with the
+            online course
+            <a href="#" class="footer-link">Advanced CSS and Sass</a>. Copyright
+            &copy; by Jonas Schemdtmann. You are 100% allowed to use this
+            webpage for both personal and commercial use, but NOT to claim it as
+            your own design. A credit to the original author, Jonas Schmedtmann,
+            is of course highly appreciated!
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
