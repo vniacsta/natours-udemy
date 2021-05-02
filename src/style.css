@@ -699,7 +699,7 @@ nav .nav-icon {
 
 .tours {
   margin-top: -10rem;
-  padding: 20rem 0 10rem 0;
+  padding: 25rem 0 10rem 0;
   background-color: #f7f7f7; }
 
 .stories {
@@ -707,7 +707,7 @@ nav .nav-icon {
   position: relative; }
 
 .booking {
-  padding: 15rem 0 10rem 0;
+  padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
 
 .book {
