@@ -23,13 +23,18 @@
     position: relative;
     width: 15rem;
     height: 15rem;
+    border-radius: 50%;
     overflow: hidden;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
+
+    @supports (clip-path: circle(0)) or (-webkit-clip-path: circle(0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -38,7 +43,7 @@
     .shape-img {
       height: 100%;
       backface-visibility: hidden;
-      transform: translate(-4rem) scale(1.4);
+      transform: translateX(-4rem) scale(1.4);
       transition: all 0.5s;
     }
   }

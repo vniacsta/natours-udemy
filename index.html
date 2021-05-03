@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
@@ -89,9 +90,27 @@
             <a href="#" class="btn-txt">Learn more &rarr;</a>
           </div>
           <div class="col-1-of-2 composition">
-            <img src="media/nat-1.jpg" alt="Nature" class="photo p1" />
-            <img src="media/nat-2.jpg" alt="Nature" class="photo p2" />
-            <img src="media/nat-3.jpg" alt="Nature" class="photo p3" />
+            <img
+              srcset="media/nat-1.jpg 300w, media/nat-1-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              src="media/nat-1-large.jpg"
+              alt="Nature"
+              class="photo p1"
+            />
+            <img
+              srcset="media/nat-2.jpg 300w, media/nat-2-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              src="media/nat-2-large.jpg"
+              alt="Nature"
+              class="photo p2"
+            />
+            <img
+              srcset="media/nat-3.jpg 300w, media/nat-3-large.jpg 1000w"
+              sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+              src="media/nat-3-large.jpg"
+              alt="Nature"
+              class="photo p3"
+            />
           </div>
         </div>
       </section>
@@ -270,8 +289,8 @@
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Reprehenderit asperiores officiis harum non, neque pariatur
-                cumque fuga delectus nam. Debitis vel inventore et natus eum
-                libero saepe deserunt perferendis sequi.
+                cumque fuga delectus nam adipisicing elit. Debitis vel inventore
+                et natus eum libero saepe deserunt perferendis sequi.
               </p>
             </div>
           </div>
@@ -294,8 +313,8 @@
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Reprehenderit asperiores officiis harum non, neque pariatur
-                cumque fuga delectus nam. Debitis vel inventore et natus eum
-                libero saepe deserunt perferendis sequi.
+                cumque fuga delectus nam adipisicing elit. Debitis vel inventore
+                et natus eum libero saepe deserunt perferendis sequi.
               </p>
             </div>
           </div>
@@ -376,8 +395,8 @@
     <aside class="popup" id="popup">
       <div class="popup-content">
         <div class="popup-images">
-          <img src="./media/nat-8.jpg" alt="Tour photo" />
-          <img src="./media/nat-9.jpg" alt="Tour photo" />
+          <img src="media/nat-8.jpg" alt="Tour photo" />
+          <img src="media/nat-9.jpg" alt="Tour photo" />
         </div>
         <div class="popup-info">
           <a href="#tours" class="close">&times;</a>
@@ -391,13 +410,10 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure
             blanditiis hic aliquid nam nobis, voluptas voluptatem dolores ex
             numquam optio saepe enim quos unde aperiam velit at! Quia,
-            voluptatem reprehenderit? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Autem est voluptate eos maxime vitae minus
-            possimus similique? Veniam quasi veritatis dicta quam quos
-            consectetur ea, nobis deleniti. Praesentium, placeat sapiente. Quia,
-            voluptatem reprehenderit? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Autem est voluptate eos maxime vitae minus
-            possimus similique?
+            voluptatem reprehenderit? Autem est voluptate eos maxime vitae minus
+            possimus similique? Praesentium, placeat sapiente. Quia, voluptatem
+            reprehenderit? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Autem est voluptate eos maxime vitae minus possimus similique?
           </p>
           <a href="#" class="btn btn-green">Book now</a>
         </div>
@@ -405,11 +421,19 @@
     </aside>
 
     <footer>
-      <img
-        src="./media/logo-green-2x.png"
-        alt="Full logo"
-        class="footer-logo"
-      />
+      <picture class="footer-logo">
+        <source
+          srcset="
+            media/logo-green-small-1x.png 1x,
+            media/logo-green-small-2x.png 2x
+          "
+          media="(max-width: 56.25em)"
+        />
+        <img
+          srcset="media/logo-green-1x.png 1x, media/logo-green-2x.png 2x"
+          alt="Logo"
+        />
+      </picture>
       <div class="row">
         <div class="col-1-of-2">
           <ul class="navigation">

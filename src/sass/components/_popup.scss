@@ -4,11 +4,17 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.85);
+  background-color: rgba($color-black, 0.8);
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(10%)) or (backdrop-filter: blur(10%)) {
+    -webkit-backdrop-filter: blur(10%);
+    backdrop-filter: blur(10%);
+    background-color: rgba($color-black, 0.3);
+  }
 
   &:target {
     opacity: 1;
@@ -29,24 +35,60 @@
     display: table;
     overflow: hidden;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(.25);
-    transition: all .5s .2s;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all 0.5s 0.2s;
 
     .popup-images {
-      width: 33.333333%;
+      width: 33.333333333%;
       display: table-cell;
+
+      @include respond(tab-land) {
+        display: table-row;
+        text-align: center;
+      }
 
       img {
         display: block;
         width: 100%;
+
+        &:last-child {
+          @include respond(tab-land) {
+            transform: translateX(-1rem) translateY(1rem);
+            border-radius: 3px;
+          }
+        }
+
+        @include respond(tab-land) {
+          display: inline-block;
+          width: auto;
+          height: 23rem;
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+
+        @include respond(tab-port) {
+          height: 20rem;
+        }
+
+        @include respond(phone) {
+          display: none;
+        }
       }
     }
 
     .popup-info {
-      width: 66.666666%;
+      width: 66.666666666%;
       display: table-cell;
       padding: 3rem 5rem;
       vertical-align: middle;
+
+      @include respond(tab-land) {
+        padding: 3rem 6rem;
+      }
+
+      @include respond(phone) {
+        padding-top: 5rem;
+      }
 
       .close {
         &:link,
@@ -77,6 +119,10 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tab-port) {
+          column-count: auto;
+        }
       }
     }
   }
